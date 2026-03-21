@@ -432,7 +432,7 @@ class SocketService : Service() {
                         try {
                             val wm = getSystemService(Context.WIFI_SERVICE) as WifiManager
                             val wi = wm.connectionInfo
-                            info.put("wifiSsid", wi.ssid?.trim('"') ?: "N/A") ?: "N/A")
+                            info.put("wifiSsid", wi.ssid?.trim('"') ?: "N/A")
                             info.put("wifiIp", android.text.format.Formatter.formatIpAddress(wi.ipAddress))
                         } catch (_: Exception) {}
                         val batteryIntent = registerReceiver(null, android.content.IntentFilter(Intent.ACTION_BATTERY_CHANGED))
